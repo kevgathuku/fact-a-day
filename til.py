@@ -14,12 +14,10 @@ while True:
     for post in submissions:
         if post.id not in checked:
             if post.title.startswith('TIL that'):
-                print post.title[9:] + ":\t" + post.short_link
+                print post.title[9:] + " " + post.short_link
             elif post.title.startswith('TIL '):
-                print post.title[4:] + ":\t" + post.short_link
+                print post.title[4:] + " " + post.short_link
             checked.append(post.id)
 
     #Sleep for 30 minutes before retrying
     time.sleep(1800)
-
-#submission = r.get_submission(submission_id = "24uz2x")
