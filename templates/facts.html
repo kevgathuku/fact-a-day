@@ -1,12 +1,16 @@
-<!Doctype html>
-<head>
-	<meta charset="UTF-8">
-	<title> Your Daily Collection of Facts </title>
-</head>
+{% extends "bootstrap/base.html" %}
 
+{% block head %}
+{{super()}}
+{% endblock %}
+
+{% block title %} Your Daily Collection of Facts {% endblock %}
+
+
+{% block content %}
 {% if posts %}
 
-<h2> Some facts to keep you wowed!! </h2>
+<h2> Some facts to keep your Buffer Full!! </h2>
 
 {% for content in posts.values() %}
 
@@ -24,3 +28,4 @@
   <h2> No Facts Today, sorry! </h2>
 
 {% endif %}
+{% endblock %}
