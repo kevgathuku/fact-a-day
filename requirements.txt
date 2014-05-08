@@ -4,6 +4,7 @@ Jinja2==2.7.2
 MarkupSafe==0.21
 Werkzeug==0.9.4
 argparse==1.2.1
+gunicorn==18.0
 itsdangerous==0.24
 praw==2.1.15
 requests==2.2.1
