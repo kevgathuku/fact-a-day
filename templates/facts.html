@@ -12,13 +12,17 @@
 
 <h2> Some facts to keep your Buffer Full!! </h2>
 
-{% for content in posts.values() %}
+{% for url, content in posts.iteritems() %}
 
 <p>
-	{{content|e}}
+	{{content|e}} -via <a href = "{{url|e}}">{{url|e}} </a>
+	<br>
+	<a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-url = {{url|e}} data-text= "{{content|e}}" >Buffer </a>
+	<script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
+
 </p>
 <p>
-	<a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-via="kevgathuku" >Buffer</a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
+	
 </p>
 
 {% endfor %}

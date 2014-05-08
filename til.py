@@ -16,7 +16,7 @@ def factsChecker():
     submissions = r.get_subreddit('todayilearned').get_hot(limit=15)
     for post in submissions:
         if post.id not in facts:
-            facts[post.id] = post.title + " " + post.short_link
+            facts[post.short_link] = post.title
     #facts = dict(zip(checked, content))
     return facts
         #Sleep for 30 minutes before retrying
