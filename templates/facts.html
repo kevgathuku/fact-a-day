@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+{{super()}}
+{% endblock %}
+
+{% block title %} Your Daily Collection of Facts {% endblock %}
+
+
+{% block content %}
+{% if posts %}
+
+<h2> Some facts to keep your Buffer Full!! </h2>
+
+{% for content in posts.values() %}
+
+<p>
+	{{content|e}}
+</p>
+<p>
+	<a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-via="kevgathuku" >Buffer</a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
+</p>
+
+{% endfor %}
+
+{% else %}
+
+  <h2> No Facts Today, sorry! </h2>
+
+{% endif %}
+{% endblock %}
